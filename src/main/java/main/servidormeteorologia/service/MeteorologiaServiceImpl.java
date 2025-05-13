@@ -1,13 +1,12 @@
 package main.servidormeteorologia.service;
 
-
-import com.exemplo.grpc.*;
+import main.servidorMeteorologia.grpc.*;
 import io.grpc.stub.StreamObserver;
-import org.springframework.stereotype.Service;
+import net.devh.boot.grpc.server.service.GrpcService;
 
 import java.util.*;
 
-@Service
+@GrpcService
 public class MeteorologiaServiceImpl extends MeteorologiaServiceGrpc.MeteorologiaServiceImplBase {
 
     private final Map<String, List<Double>> dadosClimaticos = new HashMap<>();
@@ -62,4 +61,3 @@ public class MeteorologiaServiceImpl extends MeteorologiaServiceGrpc.Meteorologi
         responseObserver.onCompleted();
     }
 }
-

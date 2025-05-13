@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-option java_package = "com.exemplo.grpc";
+option java_package = "main.servidorMeteorologia.grpc";
 option java_outer_classname = "MeteorologiaProto";
 
 service MeteorologiaService {
